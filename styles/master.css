@@ -1,0 +1,288 @@
+@import "reset.css";
+
+body {
+  font-family: "Helvetica";
+  color: white;
+  background-repeat: no-repeat;
+  background-color: black;
+  background-size: 100%;
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.artworks {
+  margin: 5vw;
+  position: relative;
+  overflow-x: hidden;
+  height: 560vw;
+}
+
+.artworks_header{
+  text-align: center;
+}
+.artworks_header_comp{
+    display: inline-block;
+}
+.artworks .artworks_header_comp img{
+  position: absolute;
+  z-index: -1;
+}
+
+.artworks .artworks_header_comp img:first-child{
+  width: 33%;
+  height: auto;
+  left: 15%;
+  top: 12%;
+}
+
+.artworks .artworks_header_comp img:nth-child(2){
+  width: 20%;
+  height: auto;
+  left: 15%;
+  top: 32.5%;
+  animation: opacity_2 5s ease-in-out infinite;
+}
+@keyframes opacity_2 {
+0%{
+  opacity: 0.4;
+}
+50%{
+  opacity: 1;
+}
+100%{
+  opacity: 0.4;
+}
+}
+.artworks .artworks_header_comp img:nth-child(3){
+  width: 20%;
+  height: auto;
+  left: 15.3%;
+  top: 29.5%;
+  animation: opacity_1 5s ease-in-out infinite;
+}
+@keyframes opacity_1 {
+0%{
+  opacity: 1;
+}
+50%{
+  opacity: 0.4;
+}
+100%{
+  opacity: 1;
+}
+}
+.artworks .artworks_header_comp img:nth-child(4){
+  width: 24%;
+  height: auto;
+  left: 30%;
+  top: 29%;
+}
+
+.artworks .artworks_header_comp img:nth-child(5){
+  width: 13%;
+  height: auto;
+  left: 50%;
+  top: 21.5%;
+  animation: rotate 3s ease infinite;
+}
+@keyframes rotate {
+0%{
+  transform: rotate(0deg);
+}
+
+50%{
+  transform: rotate(90deg);
+}
+100%{
+  transform: rotate(0deg);
+
+}
+}
+.artworks .artworks_header_comp img:nth-child(6){
+  position: absolute;
+  width: 23%;
+  top: 34%;
+  left: 42%;
+}
+
+
+.artworks .artworks_header_comp img:nth-child(7){
+  position: absolute;
+  width: 12%;
+  left: 68%;
+  top: 35%;
+}
+
+.artworks_header_comp h2{
+  display: flex;
+  flex-direction: column;
+}
+.artworks_header_comp h2 span{
+  position: absolute;
+  color: var(--red);
+  font-size: 17vw;
+  line-height: auto;
+  font-weight: bold;
+  text-decoration: none;
+  z-index: 2;
+}
+
+.artworks_header_comp h2 span:first-child{
+  left: 19%;
+  top: 22%;
+}
+
+.artworks_header_comp h2 span:nth-child(2){
+  top: 200px;
+  left: 34%;
+}
+
+.artworks_header_comp h2 span:last-child{
+  top: 255px;
+  left: 52%;
+}
+
+.artworks_header_nav ul{
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+.artworks_header_nav ul a{
+  text-decoration: none;
+  font-size: 18px;
+  color: #fff;
+  font-weight: bold;
+  text-align: left;
+}
+
+.artworks_header_nav ul  a:hover{
+  color: var(--red);
+  transition: 0.1s ease;
+  cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+
+  .artworks .artworks_header_comp img:first-child{
+    width: 27%;
+    height: auto;
+    left: 20%;
+    top: 7%;
+  }
+
+  .artworks .artworks_header_comp img:nth-child(2){
+    width: 15%;
+    height: auto;
+    left: 25%;
+    top: 74%;
+  }
+  .artworks .artworks_header_comp img:nth-child(3){
+    width: 15%;
+    height: auto;
+    left: 25.15%;
+    top: 66%;
+  }
+
+  .artworks .artworks_header_comp img:nth-child(4){
+    width: 19%;
+    height: auto;
+    left: 33%;
+    top: 64%;
+  }
+
+  .artworks .artworks_header_comp img:nth-child(5){
+    width: 18%;
+    height: auto;
+    left: 49%;
+    top: 28%;
+  }
+.artworks .artworks_header_comp img:nth-child(6){
+    width: 15%;
+    top: 65%;
+    left: 57%;
+  }
+
+.artworks .artworks_header_comp img:nth-child(7){
+    width: 10%;
+    left: 78%;
+    top: 62%;
+  }
+
+
+  .artworks_header_comp h2 span{
+    position: absolute;
+    color: var(--red);
+    font-weight: bold;
+    text-decoration: none;
+    z-index: 2;
+  }
+  .artworks_header_comp h2 span:first-child{
+    left: 12%;
+    top: 30%;
+  }
+  .artworks_header_comp h2 span:nth-child(2){
+    top: 50%;
+    left: 36%;
+  }
+  .artworks_header_comp h2 span:last-child{
+    top: 67%;
+    left: 63%;
+  }
+}
+
+/* Часть с  кругами */
+
+.artworks h2 {
+  font-size: 14vw;
+  margin: 25vw 0 11vw;
+}
+
+.collection {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 190vw;
+  margin: -2vw;
+}
+
+.collection_art,
+.space_holder {
+  margin: 2vw;
+}
+
+.collection_art,
+.space_holder,
+.collection_art img:first-child {
+  width: 25vw;
+  height: 25vw;
+}
+
+.space_holder {
+  opacity: 0%;
+}
+
+.collection_art img:nth-child(2) {
+  display: none;
+}
+
+.collection_art:hover img:nth-child(2) {
+  display: block;
+  width: 84.9vw;
+  position: absolute;
+  top: 45vw;
+  left: 1.4vw;
+}
